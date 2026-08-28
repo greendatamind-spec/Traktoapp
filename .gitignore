@@ -1,0 +1,37 @@
+# Dépendances
+node_modules/
+.pnp
+.pnp.*
+
+# Next.js
+.next/
+out/
+build/
+next-env.d.ts
+
+# PWA (générés par next-pwa)
+public/sw.js
+public/workbox-*.js
+public/sw.js.map
+public/workbox-*.js.map
+
+# Environnement — jamais de secrets en git
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# Supabase local
+supabase/.branches
+supabase/.temp
+
+# TypeScript / outillage
+*.tsbuildinfo
+coverage/
+
+# Divers
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-error.log*
