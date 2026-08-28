@@ -1,0 +1,17 @@
+import * as React from "react";
+
+import { cn } from "@/lib/utils";
+
+const Label = React.forwardRef<HTMLLabelElement, React.ComponentProps<"label">>(
+  ({ className, ...props }, ref) => (
+    // eslint-disable-next-line jsx-a11y/label-has-associated-control
+    <label
+      ref={ref}
+      className={cn("text-base font-semibold leading-none text-foreground", className)}
+      {...props}
+    />
+  ),
+);
+Label.displayName = "Label";
+
+export { Label };

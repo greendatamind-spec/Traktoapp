@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   Tokens de design Trakto — mode clair uniquement pour l'instant.
+   Terrain : une main, des gants, plein soleil → contraste élevé, grandes cibles.
+   Accent : orange chantier (volontairement pas un bleu).
+   ========================================================================== */
+@layer base {
+  :root {
+    /* Palette */
+    --background: 40 20% 98%; /* blanc cassé chaud, moins d'éblouissement */
+    --foreground: 24 10% 10%; /* quasi-noir, contraste maximal */
+    --card: 0 0% 100%;
+    --card-foreground: 24 10% 10%;
+    --primary: 24 95% 44%; /* orange chantier */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 10% 92%;
+    --secondary-foreground: 24 10% 10%;
+    --muted: 40 10% 92%;
+    --muted-foreground: 25 5% 38%;
+    --accent: 24 95% 95%;
+    --accent-foreground: 24 95% 30%;
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 8% 82%;
+    --input: 30 8% 78%;
+    --ring: 24 95% 44%;
+
+    /* Géométrie */
+    --radius: 0.75rem;
+
+    /* Espacement tactile : aucune cible interactive sous 48 px */
+    --touch-target: 3rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
